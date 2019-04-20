@@ -11,8 +11,11 @@
 </head>
 <body>
     
-<div class="box">
-asdas
+<div class="banners-wrapper">
+    <div class="container">
+       <div class="banners">
+    </div>
+    </div>
 </div>
 
 </body>

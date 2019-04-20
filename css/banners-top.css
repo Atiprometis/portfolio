@@ -1,5 +1,10 @@
-.box{
-    height: 200px;
-    width: 200px;
-    background-color: red;
+.banners-wrapper{
+    height: 300px;
+    width: 100%;
+    background-color: #dddddd;
+}
+.banners{
+    height: 300px;
+    width: 100%;
+    background-color: #979797;
 }
