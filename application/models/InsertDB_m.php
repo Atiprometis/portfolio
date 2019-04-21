@@ -15,10 +15,16 @@ class insertDB_m extends CI_Model{
         // );
 
         $this->db->insert('user',$data);
-
-
-
     }
+
+    function insertImages(){
+        $data = array(
+            'url' => $this->_url,
+        );
+        $this->db->insert('picture', $data);
+        return $this->db->insert_id();
+    }
+
 }
 
 ?>

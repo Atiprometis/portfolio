@@ -5,10 +5,9 @@ class portfolio extends CI_Controller {
     {
        parent::__construct(); 
        $this->load->view('fileportfolio/header-script');
-       $this->load->model('queryDB_m');
-       $this->load->model('insertDB_m');
+       $this->load->library('upload');
     }
-
+    
     function index(){
       $data['query'] = $this->queryDB_m->getContact();
       // $this->load->view('fileportfolio/aboutme',$data);
@@ -21,6 +20,23 @@ class portfolio extends CI_Controller {
       // $this->load->view('test1');
       
      }
+     function do_upload(){
+      $config['upload_path'] = 'assets/upload/';
+      $config['allowed_types'] = 'gif|jpg|png';
+      $config['max_size'] = '100';
+      $config['max_width'] = '1024';
+      $config['max_height'] = '768';
+
+
+     }
+
+
+
+     function testView(){
+       $this->load->view('fileportfolio/myportfolio');
+     }
+
+
     function add(){
        $data['name'] = $this->input->post('name');
        $data['email'] = $this->input->post('email');

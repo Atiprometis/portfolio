@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
+    
 </head>
 <body>
     <h1>รายละเอียด</h1>
@@ -24,7 +25,7 @@
 
        
     <table class="table">
-        <thead>
+        <thead class="thead-dark">
             <tr>
             <th scope="col">id</th>
             <th scope="col">ชื่อ</th>

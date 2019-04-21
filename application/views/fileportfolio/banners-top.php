@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <?php echo link_tag('css/banners-top.css');?>
+    <?php echo link_tag('assets/css/banners-top.css');?>
 
 </head>
 <body>
