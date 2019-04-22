@@ -1,8 +1,8 @@
-<h1>footesssr</h1>
+<h1></h1>
 
-<a href="<?php echo site_url()?>/portfolio/getContact">da</a>
 
-<?php 
+
+<!-- <?php 
     echo form_open('portfolio/add');
     echo form_label('ชื่อ');
     echo form_input('name');
@@ -20,4 +20,4 @@
     
 
     echo form_close();
-    ?>
+    ?> -->

@@ -10,30 +10,23 @@ class portfolio extends CI_Controller {
     
     function index(){
       $data['query'] = $this->queryDB_m->getContact();
+
+      $data['queryimages'] = $this->selectDB_m->selectImageDB();
+      $data['querywebsite'] = $this->selectDB_m->queryWebsiteimageDB();
       // $this->load->view('fileportfolio/aboutme',$data);
 
         $this->load->view('fileportfolio/header');
         $this->load->view('fileportfolio/banners-top');
-        $this->load->view('fileportfolio/aboutme',$data);
-        $this->load->view('fileportfolio/myportfolio');
+        // $this->load->view('fileportfolio/aboutme',$data);
+        $this->load->view('fileportfolio/myportfolio',$data);
         $this->load->view('fileportfolio/footer');
       // $this->load->view('test1');
       
      }
-     function do_upload(){
-      $config['upload_path'] = 'assets/upload/';
-      $config['allowed_types'] = 'gif|jpg|png';
-      $config['max_size'] = '100';
-      $config['max_width'] = '1024';
-      $config['max_height'] = '768';
-
-
-     }
-
-
-
+ 
      function testView(){
-       $this->load->view('fileportfolio/myportfolio');
+       $data['query'] = $this->selectDB_m->selectImageDB();
+       $this->load->view('selectImages',$data);
      }
 
 
@@ -45,7 +38,7 @@ class portfolio extends CI_Controller {
 
        $this->insertDB_m->insertDB($data);
        redirect('portfolio/index');
-      //  $this->load->view('fileportfolio/myportfolio', $data);
+       $this->load->view('fileportfolio/myportfolio', $data);
     }
     
     function getContact(){

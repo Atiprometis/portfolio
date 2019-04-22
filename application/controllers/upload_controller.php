@@ -16,20 +16,23 @@ public function __construct() {
     'allowed_types' => "gif|jpg|png|jpeg|pdf",
     'overwrite' => TRUE,
     'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
-    'max_height' => "768",
-    'max_width' => "1024"
+    'max_height' => "1768",
+    'max_width' => "1924"
     );
 
     $this->load->library('upload', $config);
-    if($this->upload->do_upload())
+    if( ! $this->upload->do_upload())
         {
-        $data = array('upload_data' => $this->upload->data());
-        $this->load->view('upload_success',$data);
+            $error = array('error' => $this->upload->display_errors());
+            $this->load->view('custom_view', $error);       
         }
     else
         {
-        $error = array('error' => $this->upload->display_errors());
-        $this->load->view('custom_view', $error);
+            $data = array('upload_data' => $this->upload->data());
+
+            $this->load->view('upload_success',$data);
+    
+            $this->insertDB_m->insertImages($data);
         }
     }
 }

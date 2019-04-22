@@ -17,12 +17,17 @@ class insertDB_m extends CI_Model{
         $this->db->insert('user',$data);
     }
 
-    function insertImages(){
+    function insertImages($data){
+        
         $data = array(
-            'url' => $this->_url,
+            'image' => $this->upload->data('file_name'),
+            'image_path' => $this->upload->data('file_path'),
+            'image_link' => $this->input->post('link'),
+            'typework' => $this->input->post('typework'),
         );
-        $this->db->insert('picture', $data);
-        return $this->db->insert_id();
+        
+        $this->db->insert('image_portfolio', $data); 
+        
     }
 
 }

@@ -29,32 +29,45 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-4 ">
-                            <div class="card img-wrapper" >
-                            <img src="<?php echo base_url('assets/img/view1.jpg'); ?>" class="bb-hover" >
-
+                        <?php
+                            foreach ($queryimages->result() as $row)
+                                {
+                        ?> 
+                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                            <div class="img-wrapper" >         
+                                                <a href= "<?php echo $row->image_link ?>">
+                                                <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
+                                               </a>
                             </div>
                         </div>
-                        <div class="col-4 ">
-                            <div class="card img-wrapper" >
-                            <img src="<?php echo base_url('assets/img/view2.jpg'); ?>" class="bb-hover" >
-
-                            </div>
-                        </div>
-                        <div class="col-4 ">
-                            <div class="card img-wrapper" >
-                            <img src="<?php echo base_url('assets/img/view3.jpg'); ?>" class="bb-hover" >
-
-                            </div>
-                        </div>
-                        
-                        
+                        <?php                     
+                                }
+                        ?>
                     </div>
                 </div>
 
 
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">.asdasdasdasdasdasd..</div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="container">
+                    <div class="row">
+                        <?php
+                            foreach ($querywebsite->result() as $row)
+                                {
+                        ?> 
+                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                            <div class="img-wrapper" >         
+                                                <a href= "<?php echo $row->image_link ?>">
+                                                <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
+                                               </a>
+                            </div>
+                        </div>
+                        <?php                     
+                                }
+                        ?>
+                    </div>
+                </div>
+                </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">.asdasdasdasd..</div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">.asdasdasdasd..</div>
             </div>
