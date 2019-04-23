@@ -19,9 +19,9 @@
              <nav > 
                 <div class="nav justify-content-center " id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active color-gray" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ALL</a>
-                    <a class="nav-item nav-link color-gray" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">WEB</a>
-                    <a class="nav-item nav-link color-gray" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">DESIGN</a>
-                    <a class="nav-item nav-link color-gray" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">OTHER</a>
+                    <a class="nav-item nav-link color-gray" id="nav-web-tab" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="false">WEB</a>
+                    <a class="nav-item nav-link color-gray" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">DESIGN</a>
+                    <a class="nav-item nav-link color-gray" id="nav-other-tab" data-toggle="tab" href="#nav-other" role="tab" aria-controls="nav-other" aria-selected="false">OTHER</a>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -33,7 +33,7 @@
                             foreach ($queryimages->result() as $row)
                                 {
                         ?> 
-                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                        <div class="col-lg-3 col-md-6 col-sm-6 martop10">
                             <div class="img-wrapper" >         
                                                 <a href= "<?php echo $row->image_link ?>">
                                                 <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
@@ -48,7 +48,7 @@
 
 
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="tab-pane fade" id="nav-web" role="tabpanel" aria-labelledby="nav-web-tab">
                 <div class="container">
                     <div class="row">
                         <?php
@@ -68,8 +68,46 @@
                     </div>
                 </div>
                 </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">.asdasdasdasd..</div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">.asdasdasdasd..</div>
+                <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
+                <div class="container">
+                    <div class="row">
+                        <?php
+                            foreach ($querydesign->result() as $row)
+                                {
+                        ?> 
+                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                            <div class="img-wrapper" >         
+                                                <a href= "<?php echo $row->image_link ?>">
+                                                <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
+                                               </a>
+                            </div>
+                        </div>
+                        <?php                     
+                                }
+                        ?>
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
+                <div class="container">
+                    <div class="row">
+                        <?php
+                            foreach ($queryother->result() as $row)
+                                {
+                        ?> 
+                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                            <div class="img-wrapper" >         
+                                                <a href= "<?php echo $row->image_link ?>">
+                                                <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
+                                               </a>
+                            </div>
+                        </div>
+                        <?php                     
+                                }
+                        ?>
+                    </div>
+                </div>   
+                </div>
             </div>
        </div>
     

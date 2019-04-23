@@ -13,6 +13,8 @@ class portfolio extends CI_Controller {
 
       $data['queryimages'] = $this->selectDB_m->selectImageDB();
       $data['querywebsite'] = $this->selectDB_m->queryWebsiteimageDB();
+      $data['querydesign'] = $this->selectDB_m->queryDesignimageDB();
+      $data['queryother'] = $this->selectDB_m->queryOtherimageDB();
       // $this->load->view('fileportfolio/aboutme',$data);
 
         $this->load->view('fileportfolio/header');
