@@ -6,6 +6,7 @@ class portfolio extends CI_Controller {
        parent::__construct(); 
        $this->load->view('fileportfolio/header-script');
        $this->load->library('upload');
+       $this->load->view('fileportfolio/header');
     }
     
     function index(){
@@ -17,7 +18,7 @@ class portfolio extends CI_Controller {
       $data['queryother'] = $this->selectDB_m->queryOtherimageDB();
       // $this->load->view('fileportfolio/aboutme',$data);
 
-        $this->load->view('fileportfolio/header');
+       
         $this->load->view('fileportfolio/banners-top');
         // $this->load->view('fileportfolio/aboutme',$data);
         $this->load->view('fileportfolio/myportfolio',$data);
@@ -25,7 +26,36 @@ class portfolio extends CI_Controller {
       // $this->load->view('test1');
       
      }
- 
+     function viewmore(){
+
+      $data['queryimages'] = $this->selectDB_m->selectImageDBAll();
+      $data['querywebsite'] = $this->selectDB_m->selectWebsiteDBAll();
+      $data['querydesign'] = $this->selectDB_m->selectDesignimageDBAll();
+      $data['queryother'] = $this->selectDB_m->selectOtherimageDBAll();
+
+
+      echo $data2['name1'] = $this->input->post('name1');
+      $this->load->view('fileportfolio/viewmore',$data,$data2);
+
+      // if($data2 ='1'){
+        
+
+      // }
+      // else if($data2 ='2'){
+
+
+      //   $this->load->view('fileportfolio/viewmore',$data,$data2);
+      // }
+
+        
+        // $data['queryimages'] = $this->selectDB_m->selectImageDB();
+  
+        // $this->load->view('fileportfolio/viewmore',$data);
+
+     }
+
+
+
      function testView(){
        $data['query'] = $this->selectDB_m->selectImageDB();
        $this->load->view('selectImages',$data);

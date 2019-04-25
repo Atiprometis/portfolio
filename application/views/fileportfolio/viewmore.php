@@ -1,29 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <title>Document</title>
     <?php echo link_tag('assets/css/myportfolio.css')?>
     <?php echo link_tag('assets/img/minmin.png')?>
 </head>
 <body>
 
-  
-    <div class="container">
+
+
+
+<div class="container">
         <h1 class="head-port">PORTFOLIO</h1>
-        
+
        <div class="tabs-portfolio">
              <nav > 
                 <div class="nav justify-content-center " id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link color-gray
-                   
+                    
+                    <a class="nav-item nav-link color-gray 
+                    <?php 
+                           if($name1 ='1'){
+                               echo 'active';
+                           }
+                    ?>
+
                     " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ALL</a>
-                    <a class="nav-item nav-link color-gray active" id="nav-web-tab" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="false">WEB</a>
+                    <a class="nav-item nav-link color-gray" id="nav-web-tab" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="false">WEB</a>
                     <a class="nav-item nav-link color-gray" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">DESIGN</a>
                     <a class="nav-item nav-link color-gray" id="nav-other-tab" data-toggle="tab" href="#nav-other" role="tab" aria-controls="nav-other" aria-selected="false">OTHER</a>
+                   
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -32,7 +40,7 @@
                 <div class="container">
                     <div class="row">
                         <?php
-                            foreach ($querywebsite->result() as $row)
+                            foreach ($queryimages->result() as $row)
                                 {
                         ?> 
                         <div class="col-lg-3 col-md-6 col-sm-6 martop10">
@@ -46,13 +54,6 @@
                                 }
                         ?>
                     </div>
-                        <?php 
-                        echo form_open('portfolio/viewmore');
-                        ?>
-                        <button name="name1" id="name1" value="1" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">Register</button>
-                        <?php                        
-                        echo form_close();
-                        ?>
                 </div>
 
 
@@ -74,15 +75,7 @@
                         <?php                     
                                 }
                         ?>
-                        
                     </div>
-                    <?php 
-                        echo form_open('portfolio/viewmore');
-                        ?>
-                        <button name="name1" id="name1" value="2" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">Register</button>
-                        <?php                        
-                        echo form_close();
-                        ?>
                 </div>
                 </div>
                 <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
@@ -122,24 +115,17 @@
                         <?php                     
                                 }
                         ?>
-                        
                     </div>
                 </div>   
                 </div>
 
-
-                
-
-                
-
-                
-
-                
             </div>
-
-       </div>
+            
+         </div>
+         
     
     </div>
+</div>
 
 </body>
 </html>

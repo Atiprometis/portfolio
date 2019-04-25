@@ -10,7 +10,7 @@
     <li><?php echo $item;?>: <?php echo $value;?></li>
     <?php endforeach; ?>
 </ul>
-<p><?php echo anchor('upload_controller/file_view', 'Upload Another File!'); ?></p>
+<p><?php echo anchor('upload_controller/custom_view', 'Upload Another File!'); ?></p>
 
 
 
