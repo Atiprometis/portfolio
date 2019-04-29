@@ -28,14 +28,17 @@ class portfolio extends CI_Controller {
      }
      function viewmore(){
 
+      $data['name1'] = $this->input->post('name1');
+
       $data['queryimages'] = $this->selectDB_m->selectImageDBAll();
       $data['querywebsite'] = $this->selectDB_m->selectWebsiteDBAll();
       $data['querydesign'] = $this->selectDB_m->selectDesignimageDBAll();
       $data['queryother'] = $this->selectDB_m->selectOtherimageDBAll();
 
 
-      echo $data2['name1'] = $this->input->post('name1');
-      $this->load->view('fileportfolio/viewmore',$data,$data2);
+    
+     
+      $this->load->view('fileportfolio/viewmore',$data);
 
       // if($data2 ='1'){
         
@@ -53,7 +56,11 @@ class portfolio extends CI_Controller {
         // $this->load->view('fileportfolio/viewmore',$data);
 
      }
+     function testinsert(){
+      $data['name1'] = $this->input->post('name1');
+      $this->insertDB_m->testinsert($data);
 
+     }
 
 
      function testView(){

@@ -11,7 +11,7 @@
 <body>
 
 
-
+<?php echo var_dump($name1); ?>
 
 <div class="container">
         <h1 class="head-port">PORTFOLIO</h1>
@@ -20,22 +20,15 @@
              <nav > 
                 <div class="nav justify-content-center " id="nav-tab" role="tablist">
                     
-                    <a class="nav-item nav-link color-gray 
-                    <?php 
-                           if($name1 ='1'){
-                               echo 'active';
-                           }
-                    ?>
-
-                    " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ALL</a>
-                    <a class="nav-item nav-link color-gray" id="nav-web-tab" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="false">WEB</a>
-                    <a class="nav-item nav-link color-gray" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">DESIGN</a>
-                    <a class="nav-item nav-link color-gray" id="nav-other-tab" data-toggle="tab" href="#nav-other" role="tab" aria-controls="nav-other" aria-selected="false">OTHER</a>
+                    <a class="nav-item nav-link color-gray " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="">ALL</a>
+                    <a class="nav-item nav-link color-gray  "nav-web-tab" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="">WEB</a>
+                    <a class="nav-item nav-link color-gray  "nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="">DESIGN</a>
+                    <a class="nav-item nav-link color-gray "  nav-other-tab" data-toggle="tab" href="#nav-other" role="tab" aria-controls="nav-other" aria-selected="">OTHER</a>
                    
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade <?php switch($name1){ case "1": echo "show active" ;break; default: " ";}?>" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
                 <div class="container">
                     <div class="row">
@@ -58,14 +51,14 @@
 
 
                 </div>
-                <div class="tab-pane fade" id="nav-web" role="tabpanel" aria-labelledby="nav-web-tab">
+                <div class="tab-pane fade <?php switch($name1){ case "2": echo "show active";break; default: " ";}?>" id="nav-web" role="tabpanel" aria-labelledby="nav-web-tab">
                 <div class="container">
                     <div class="row">
                         <?php
                             foreach ($querywebsite->result() as $row)
                                 {
                         ?> 
-                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                        <div class="col-lg-3 col-md-6 col-sm-6 martop10">
                             <div class="img-wrapper" >         
                                                 <a href= "<?php echo $row->image_link ?>">
                                                 <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
@@ -78,14 +71,14 @@
                     </div>
                 </div>
                 </div>
-                <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
+                <div class="tab-pane fade <?php switch($name1){ case "3": echo "show active";break; default: " ";}?>" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
                 <div class="container">
                     <div class="row">
                         <?php
                             foreach ($querydesign->result() as $row)
                                 {
                         ?> 
-                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                        <div class="col-lg-3 col-md-6 col-sm-6 martop10">
                             <div class="img-wrapper" >         
                                                 <a href= "<?php echo $row->image_link ?>">
                                                 <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
@@ -98,14 +91,14 @@
                     </div>
                 </div>
                 </div>
-                <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
+                <div class="tab-pane fade <?php switch($name1){ case "4": echo "show active";break; default: " ";}?>" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
                 <div class="container">
                     <div class="row">
                         <?php
                             foreach ($queryother->result() as $row)
                                 {
                         ?> 
-                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                        <div class="col-lg-3 col-md-6 col-sm-6 martop10">
                             <div class="img-wrapper" >         
                                                 <a href= "<?php echo $row->image_link ?>">
                                                 <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      

@@ -18,10 +18,8 @@
        <div class="tabs-portfolio">
              <nav > 
                 <div class="nav justify-content-center " id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link color-gray
-                   
-                    " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ALL</a>
-                    <a class="nav-item nav-link color-gray active" id="nav-web-tab" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="false">WEB</a>
+                    <a class="nav-item nav-link color-gray active " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ALL</a>
+                    <a class="nav-item nav-link color-gray " id="nav-web-tab" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="false">WEB</a>
                     <a class="nav-item nav-link color-gray" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">DESIGN</a>
                     <a class="nav-item nav-link color-gray" id="nav-other-tab" data-toggle="tab" href="#nav-other" role="tab" aria-controls="nav-other" aria-selected="false">OTHER</a>
                 </div>
@@ -46,10 +44,13 @@
                                 }
                         ?>
                     </div>
+                    
                         <?php 
-                        echo form_open('portfolio/viewmore');
+                        $attributes = array('class' => 'wrapperbutton');
+                        echo form_open('portfolio/viewmore',$attributes);
                         ?>
-                        <button name="name1" id="name1" value="1" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">Register</button>
+                        
+                        <button class="button-viewmore" name=" name1" id="name1" value="1" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">VIEWMORE</button>
                         <?php                        
                         echo form_close();
                         ?>
@@ -64,7 +65,7 @@
                             foreach ($querywebsite->result() as $row)
                                 {
                         ?> 
-                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                        <div class="col-lg-3 col-md-6 col-sm-6 martop10">
                             <div class="img-wrapper" >         
                                                 <a href= "<?php echo $row->image_link ?>">
                                                 <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
@@ -77,12 +78,13 @@
                         
                     </div>
                     <?php 
-                        echo form_open('portfolio/viewmore');
+                        $attributes = array('class' => 'wrapperbutton');
+                        echo form_open('portfolio/viewmore',$attributes);
                         ?>
-                        <button name="name1" id="name1" value="2" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">Register</button>
+                        <button  class="button-viewmore" name="name1"  id="name1" value="2" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">VIEWMORE</button>
                         <?php                        
                         echo form_close();
-                        ?>
+                    ?>
                 </div>
                 </div>
                 <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
@@ -92,7 +94,7 @@
                             foreach ($querydesign->result() as $row)
                                 {
                         ?> 
-                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                        <div class="col-lg-3 col-md-6 col-sm-6 martop10">
                             <div class="img-wrapper" >         
                                                 <a href= "<?php echo $row->image_link ?>">
                                                 <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
@@ -103,6 +105,14 @@
                                 }
                         ?>
                     </div>
+                    <?php 
+                        $attributes = array('class' => 'wrapperbutton');
+                        echo form_open('portfolio/viewmore',$attributes);
+                        ?>
+                        <button class="button-viewmore" name="name1" id="name1" value="3" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">VIEWMORE</button>
+                        <?php                        
+                        echo form_close();
+                    ?>
                 </div>
                 </div>
                 <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
@@ -112,7 +122,7 @@
                             foreach ($queryother->result() as $row)
                                 {
                         ?> 
-                        <div class="col-lg-4 col-md-6 col-sm-6 martop10">
+                        <div class="col-lg-3 col-md-6 col-sm-6 martop10">
                             <div class="img-wrapper" >         
                                                 <a href= "<?php echo $row->image_link ?>">
                                                 <img src="<?php echo base_url('assets/uploads/'.$row->image); ?>" class="bb-hover" >      
@@ -124,17 +134,17 @@
                         ?>
                         
                     </div>
+                    <?php 
+                        $attributes = array('class' => 'wrapperbutton');
+                        echo form_open('portfolio/viewmore',$attributes);
+                        ?>
+                        <button class="button-viewmore" name="name1" id="name1" value="4" onclick="location.href='<?php echo base_url();?>index.php/portfolio/viewmore'">VIEWMORE</button>
+                        <?php                        
+                        echo form_close();
+                    ?>
                 </div>   
                 </div>
 
-
-                
-
-                
-
-                
-
-                
             </div>
 
        </div>

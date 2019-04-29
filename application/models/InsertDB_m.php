@@ -29,6 +29,9 @@ class insertDB_m extends CI_Model{
         $this->db->insert('image_portfolio', $data); 
         
     }
+    function testinsert($data){
+        $this->db->insert('test',$data);
+    }
 
 }
 
