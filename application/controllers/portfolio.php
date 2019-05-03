@@ -6,7 +6,9 @@ class portfolio extends CI_Controller {
        parent::__construct(); 
        $this->load->view('fileportfolio/header-script');
        $this->load->library('upload');
-       $this->load->view('fileportfolio/header');
+      //  $this->load->view('fileportfolio/header');
+       $this->load->library('javascript');
+       $this->load->view('fileportfolio/scriptall');
     }
     
     function index(){
@@ -64,8 +66,7 @@ class portfolio extends CI_Controller {
 
 
      function testView(){
-       $data['query'] = $this->selectDB_m->selectImageDB();
-       $this->load->view('selectImages',$data);
+       $this->load->view('parallax');
      }
 
 
