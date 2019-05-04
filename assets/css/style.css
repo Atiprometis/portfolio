@@ -10,3 +10,13 @@
   min-height: 400px;
   background: transparent;
 }
+body{
+  height: 120%;
+}
+.dd1{
+  margin-top: 200px;
+  color: red;
+}
+.dd2{
+  margin-top: 300px;
+}

@@ -20,11 +20,11 @@ class portfolio extends CI_Controller {
       $data['queryother'] = $this->selectDB_m->queryOtherimageDB();
       // $this->load->view('fileportfolio/aboutme',$data);
 
-       
-        $this->load->view('fileportfolio/banners-top');
+      $this->load->view('fileportfolio/bganimation');
+        // $this->load->view('fileportfolio/banners-top');
         // $this->load->view('fileportfolio/aboutme',$data);
-        $this->load->view('fileportfolio/myportfolio',$data);
-        $this->load->view('fileportfolio/footer');
+        // $this->load->view('fileportfolio/myportfolio',$data);
+        // $this->load->view('fileportfolio/footer');
       // $this->load->view('test1');
       
      }
@@ -36,37 +36,12 @@ class portfolio extends CI_Controller {
       $data['querywebsite'] = $this->selectDB_m->selectWebsiteDBAll();
       $data['querydesign'] = $this->selectDB_m->selectDesignimageDBAll();
       $data['queryother'] = $this->selectDB_m->selectOtherimageDBAll();
-
-
-    
-     
       $this->load->view('fileportfolio/viewmore',$data);
-
-      // if($data2 ='1'){
-        
-
-      // }
-      // else if($data2 ='2'){
-
-
-      //   $this->load->view('fileportfolio/viewmore',$data,$data2);
-      // }
-
-        
-        // $data['queryimages'] = $this->selectDB_m->selectImageDB();
-  
-        // $this->load->view('fileportfolio/viewmore',$data);
-
      }
-     function testinsert(){
-      $data['name1'] = $this->input->post('name1');
-      $this->insertDB_m->testinsert($data);
-
-     }
-
 
      function testView(){
-       $this->load->view('parallax');
+      //  $this->load->view('parallax');
+       $this->load->view('rellax');
      }
 
 
@@ -80,6 +55,12 @@ class portfolio extends CI_Controller {
        redirect('portfolio/index');
        $this->load->view('fileportfolio/myportfolio', $data);
     }
+
+    function testinsert(){
+      $data['name1'] = $this->input->post('name1');
+      $this->insertDB_m->testinsert($data);
+
+     }
     
     function getContact(){
        $data['query'] = $this->queryDB_m->getContact();

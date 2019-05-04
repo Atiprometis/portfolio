@@ -1,10 +1,63 @@
+
+
+
 .banners-wrapper{
     height: 100%;
     width: 100%;
-    background-color: #dddddd;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #fff;
 }
 .banners{
-    height: 1000px;
+    height: 950px;
     width: 100%;
-    background-color: #979797;
+  
+    background-color: #000;
+    
+    filter: brightness(200%);
+}
+.text::before{
+    content: 'chaitawat';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+}
+.gradient{
+background: linear-gradient(112.72013189013455deg, rgba(227, 86, 168,1) 4.927083333333334%,rgba(50, 117, 240,1) 97.84374999999999%);
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+mix-blend-mode: multiply;
+}
+.dot{
+    background: radial-gradient(circle,white,black 35%) center / 15% 20%;
+    position: absolute;
+    
+    top: -10%;
+    left: -40%;
+    right: 50%;
+    bottom: 60%;
+    
+    mix-blend-mode: color-dodge;
+    animation: doge-area 3s linear infinite;
+}
+@-webkit-keyframes doge-area {
+    to {
+        transform: translate(50%,50%)
+    }
+}
+.text{
+    color: #fff;
+    padding: 50px;
+    background-color: #000;
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.neon-wrapper{
+    position: relative;
 }

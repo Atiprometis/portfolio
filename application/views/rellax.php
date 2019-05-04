@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <?php echo link_tag('assets/css/banners-top.css');?>
+    <?php  echo link_tag('assets/css/style.css')?>
 
 </head>
 <body>
     
-<!-- <div class="banners-wrapper"> 
-    
-        <div class="banners">
-                <span class="text">chaitawat</span>               
-                <span class="gradient"></span>
-                <span class="dot"></span>
-        </div>
-    
-</div> -->
+<div class="rellax dd1" >
+  I’m slow and smooth
+</div>
 
+<div class="rellax dd2" data-rellax-speed="6">
+  I’m slow and smooth
+</div>
+
+
+<div class="rellax dd2" data-rellax-speed="2">gor ma di kub</div>
 
 <script type="text/javascript" src="<?php echo base_url("assets/js/rellax.js")?>"></script> 
 <script>
@@ -34,6 +34,7 @@
       });
 
 </script>
+
+
 </body>
 </html>
-

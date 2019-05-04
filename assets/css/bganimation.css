@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    overflow: hidden;
+}
+.bgPulse{
+width: 100%;
+height: 100%;
+}
+.bgPulse span{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #000;
+    animation: anime 5s linear infinite;
+    
+}
+.bgPulse span:nth-child(2n+1)
+{
+    background: transparent;
+    border: 5px solid #000;
+    border-radius: 25%;
+    
+}
+.bgPulse span:nth-child(1)
+{
+    top: 82%;
+    left: 30%;
+    animation: anime 7s linear infinite;
+}
+.bgPulse span:nth-child(2)
+{
+    top: 40%;
+    left: 60%;
+    animation: anime 4s linear infinite;
+}
+.bgPulse span:nth-child(3)
+{
+    top: 10%;
+    left: 80%;
+    animation: anime 5s linear infinite;
+}
+.bgPulse span:nth-child(4)
+{
+    top: 94%;
+    left: 75%;
+    animation: anime 6s linear infinite;
+}
+.bgPulse span:nth-child(5)
+{
+    top: 20%;
+    left: 10%;
+    animation: anime 8s linear infinite;
+}
+
+@keyframes anime {
+    0%
+    {
+        transform:   translateY(0) rotate(30deg);
+       
+       
+    }
+    50%
+    {
+        transform: translateY(-20px) rotate(0deg) ;
+      
+    }
+    100%
+    {
+        transform: translateY(0px) rotate(30deg);
+       
+    }
+}
