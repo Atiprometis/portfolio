@@ -11,7 +11,7 @@
 </head>
 <body>
     
-<!-- <div class="banners-wrapper"> 
+<div class="banners-wrapper"> 
     
         <div class="banners">
                 <span class="text">chaitawat</span>               
@@ -19,7 +19,7 @@
                 <span class="dot"></span>
         </div>
     
-</div> -->
+</div>
 
 
 <script type="text/javascript" src="<?php echo base_url("assets/js/rellax.js")?>"></script> 
