@@ -24,7 +24,7 @@ height: 100%;
     width: 80px;
     height: 80px;
     background: #000;
-    animation: anime 5s linear infinite;
+    /* animation: anime 5s linear infinite; */
     
 }
 .bgPulse span:nth-child(2n+1)
@@ -66,6 +66,41 @@ height: 100%;
     left: 10%;
     animation: anime 8s linear infinite;
 }
+.bgPulse span:nth-child(6)
+{
+    top: 30%;
+    left: 40%;
+    width: 0px;
+    height: 0px;
+    background: none;
+    border-top: 70px solid #000;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+   
+    animation: anime 10s linear infinite;
+}
+.bgPulse span:nth-child(6)::before
+{
+    content: "";
+    position: absolute;
+
+    top: -65px;
+    left: -30px;
+    width: 0px;
+    height: 0px;
+    background: none;
+    border-top: 50px solid #fff;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    
+    
+}
+.bgPulse span:nth-child(7)
+{
+    top: 45%;
+    left: 20%;
+    animation: anime 2s linear infinite;
+}
 
 @keyframes anime {
     0%
@@ -74,14 +109,22 @@ height: 100%;
         background: 
        
     }
-    50%
+    30%
     {
         transform: translateY(-20px) rotate(0deg) ;
       
     }
-    100%
+    60%
     {
-        transform: translateY(0px) rotate(70deg);
+        transform: translateY(0px) rotate(-70deg);
        
     }
+    100%{
+        transform: translateY(0px) rotate(70deg);
+    }
 }
+
+@media only screen and (max-width: 768px) {
+    .bgPulse {
+      display: none;
+  }
