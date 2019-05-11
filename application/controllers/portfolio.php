@@ -21,12 +21,13 @@ class portfolio extends CI_Controller {
       $data['queryother'] = $this->selectDB_m->queryOtherimageDB();
       // $this->load->view('fileportfolio/aboutme',$data);
 
-      $this->load->view('fileportfolio/bganimation');
+      // $this->load->view('fileportfolio/bganimation');
       $this->load->view('fileportfolio/banners-top');
+      
         // $this->load->view('fileportfolio/aboutme',$data);
       $this->load->view('fileportfolio/myportfolio',$data);
         // $this->load->view('fileportfolio/footer');
-      $this->load->view('rellax');
+      // $this->load->view('rellax');
       
      }
      function viewmore(){
