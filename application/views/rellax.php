@@ -14,7 +14,7 @@
 <div class="rellax dd2" data-rellax-speed="6">
   I’m slow and smooth
 </div>
-
+<img src="<?php echo base_url('assets/img/img1.jpg'); ?>" class="rellax" data-rellax-speed="4">
 
 <div class="rellax dd2" data-rellax-speed="2">gor ma di kub</div>
 

@@ -22,10 +22,10 @@ class portfolio extends CI_Controller {
       // $this->load->view('fileportfolio/aboutme',$data);
 
       // $this->load->view('fileportfolio/bganimation');
-      $this->load->view('fileportfolio/banners-top');
+      // $this->load->view('fileportfolio/banners-top');
       
         $this->load->view('fileportfolio/aboutme');
-      // $this->load->view('fileportfolio/myportfolio',$data);
+      $this->load->view('fileportfolio/myportfolio',$data);
       // $this->load->view('fileportfolio/bganimation');
         // $this->load->view('fileportfolio/footer');
       // $this->load->view('rellax');

@@ -19,13 +19,13 @@
                             </div>
                 </div>
             </section>
-            <section class="panel banner">
+            <!-- <section class="panel banner">
                 <div class="banners-wrapper">    
                             <div class="banners " >        
                                     <h1  class="text-top " data-text="i don't know what to do">i don't know what to do </h1>   
                             </div>
                 </div>
-            </section>
+            </section> -->
            
         </div>
         </section>
@@ -35,7 +35,7 @@
 
 
 
-<script>
+<!-- <script>
 						$(function () { // wait for document ready
 							// init
 							var controller = new ScrollMagic.Controller();
@@ -59,7 +59,7 @@
 								.addIndicators() // add indicators (requires plugin)
 								.addTo(controller);
 						});
-</script>
+</script> -->
 
 
 
