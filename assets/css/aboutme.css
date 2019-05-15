@@ -64,4 +64,19 @@ body{
 }
 .text-skill{
     width: 100%;
+    
+    
+    
+
+}
+.text-skill span{
+    font-size: 1.7em;
+    text-transform: uppercase;
+    padding: 10px 10px 10px 50px;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+}
+.text-skill p{
+    margin-top: 20px;
+    font-size: 1.4em;
 }

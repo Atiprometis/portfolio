@@ -23,8 +23,11 @@
     </div>
 </div>
 <div class="about-skill d-flex justify-content-end">
-    <div class="spac-skill">asa</div>
-    <span class="rellax d-flex text-skill justify-content-start">Skill</span>
+    <div class="spac-skill"></div>
+    <div class="rellax text-skill justify-content-start">
+        <span>Skill</span>
+        <p>I have knowledge about designand coding</p>
+    </div>
 </div>
  
 
