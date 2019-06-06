@@ -25,7 +25,7 @@ class portfolio extends CI_Controller {
       // $this->load->view('fileportfolio/banners-top');
       
         $this->load->view('fileportfolio/aboutme');
-      $this->load->view('fileportfolio/myportfolio',$data);
+      // $this->load->view('fileportfolio/myportfolio',$data);
       // $this->load->view('fileportfolio/bganimation');
         // $this->load->view('fileportfolio/footer');
       // $this->load->view('rellax');
@@ -44,8 +44,8 @@ class portfolio extends CI_Controller {
 
      function testView(){
       //  $this->load->view('parallax');
-       $this->load->view('rellax');
-      //  $this->load->view('test1');
+      //  $this->load->view('rellax');
+       $this->load->view('skills');
      }
 
 

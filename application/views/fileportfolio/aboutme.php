@@ -21,8 +21,13 @@
         <!-- <img src="<?php echo base_url('assets/img/camera1.png'); ?>" class="rellax  image-introduce-img" data-rellax-speed="1"> -->
         
     </div>
+</div> 
+
+<div>
+    <?php $this->load->view('skills'); ?>    
 </div>
-<div class="about-skill d-flex align-items-end justify-content-end">
+
+<!-- <div class="about-skill d-flex align-items-end justify-content-end">
     <div class="spac-skill"></div>
     <div class="rellax text-skill justify-content-start">
         <span>Skill</span>
@@ -38,7 +43,20 @@
         <span>REACT / C# / VUE / FIREBASE </span>
         <span>3Ds max / Sketchup / Unity</span>
     </div>
-<div class="rellax line-bot-all-skill"></div>
+<div class="rellax line-bot-all-skill"></div> -->
+<span class="rellax contact d-flex justify-content-center  ">
+    <!-- <h2>contact</h2> -->
+        <div class="row">
+            
+            <span class=".col-6">Linkedin</span>
+            <span class=".col-6">Github</span>
+            <div class="w-100"></div>
+            <span class=".col">Behance</span>
+            <span class=".col">facebook</span>
+        </div>
+    
+    
+</span>
 
  <script type="text/javascript" src="<?php echo base_url("assets/js/rellax.js")?>"></script> 
 <script>
