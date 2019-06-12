@@ -1,0 +1,62 @@
+
+.warpper-skills{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.warpper-skills h1{
+    text-transform: uppercase;
+}
+.box-skills-all{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: 'Roboto';
+    
+}
+.line-bottom-skills{
+    border-bottom: 1px solid #888888;
+    width: 25%;
+    
+    
+}
+.box-skill-code-design{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+.codeskills{
+    width: 100%;
+    
+    line-height: 15px;
+}
+.codeskills h3{
+    font-family: 'Roboto';
+    font-size: 1em;
+    font-weight:700;
+}
+.codeskills p{
+    font-family: 'Abel';
+    font-size: 1.625em;
+    color: #888888;
+   
+}
+.designskills{
+    width: 100%;
+    line-height: 15px;
+}
+.designskills h3{
+    font-family: 'Roboto';
+    font-size: 1em;
+    font-weight:700;
+}
+.designskills p{
+    font-family: 'Abel';
+    font-size: 1.625em;
+    color: #888888;
+    s
+}

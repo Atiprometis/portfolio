@@ -9,6 +9,7 @@
 <body>
 
   
+    <div class="rellax">
     <div class="container">
         <h1 class="head-port">PORTFOLIO</h1>
         
@@ -147,6 +148,20 @@
        </div>
     
     </div>
+    </div>
 
+    
+<script>
+    //  rellax js   
+    	var rellax = new Rellax('.rellax', {
+        // center: true
+
+        // callback: function(position) {
+        //     // callback every position change
+        //     console.log(position);
+        // }
+      });
+
+</script>
 </body>
 </html>

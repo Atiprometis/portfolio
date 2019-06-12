@@ -18,11 +18,16 @@
         </div>
         
         <div class="rellax introduce-img  "></div>
-        <img src="<?php echo base_url('assets/img/camera1.png'); ?>" class="rellax  image-introduce-img" data-rellax-speed="1">
+        <!-- <img src="<?php echo base_url('assets/img/camera1.png'); ?>" class="rellax  image-introduce-img" data-rellax-speed="1"> -->
         
     </div>
+</div> 
+
+<div>
+    <?php $this->load->view('skills'); ?>    
 </div>
-<div class="about-skill d-flex justify-content-end">
+
+<!-- <div class="about-skill d-flex align-items-end justify-content-end">
     <div class="spac-skill"></div>
   
     <!-- <img src="<?php echo base_url('assets/img/camera1.png'); ?>" class="rellax " data-rellax-speed="1"> -->
@@ -31,14 +36,36 @@
         <p>I have knowledge about designand coding</p>
     </div>
 </div>
- 
+<div class="rellax line-bot-skill "></div>
+
+    <div class="rellax all-skills d-flex flex-column align-items-start justify-content-end">
+        
+        <span>HTML / CSS / JAVASCRIPT / JQUERY / PHP / MYSQL   </span>
+        <span>Adobe Photoshop / Adobe Illustrator / Adobe after effects / Adobe XD</span>
+        <span>REACT / C# / VUE / FIREBASE </span>
+        <span>3Ds max / Sketchup / Unity</span>
+    </div>
+<div class="rellax line-bot-all-skill"></div> -->
+<span class="rellax contact d-flex justify-content-center  ">
+    <!-- <h2>contact</h2> -->
+        <div class="row">
+            
+            <span class=".col-6">Linkedin</span>
+            <span class=".col-6">Github</span>
+            <div class="w-100"></div>
+            <span class=".col">Behance</span>
+            <span class=".col">facebook</span>
+        </div>
+    
+    
+</span>
 
  <script type="text/javascript" src="<?php echo base_url("assets/js/rellax.js")?>"></script> 
 <script>
     //  rellax js   
     	var rellax = new Rellax('.rellax', {
         // center: true
-
+        rellax.destroy();
         // callback: function(position) {
         //     // callback every position change
         //     console.log(position);
