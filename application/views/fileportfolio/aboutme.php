@@ -24,6 +24,8 @@
 </div>
 <div class="about-skill d-flex justify-content-end">
     <div class="spac-skill"></div>
+  
+    <!-- <img src="<?php echo base_url('assets/img/camera1.png'); ?>" class="rellax " data-rellax-speed="1"> -->
     <div class="rellax text-skill justify-content-start">
         <span>Skill</span>
         <p>I have knowledge about designand coding</p>

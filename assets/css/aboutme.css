@@ -55,7 +55,7 @@ body{
     right: -5%;
 }
 .spac-skill{
-    width: 100%;
+    width: 80%;
 }
 .about-skill{
     height: 400px;
@@ -64,10 +64,8 @@ body{
 }
 .text-skill{
     width: 100%;
+   
     
-    
-    
-
 }
 .text-skill span{
     font-size: 1.7em;
@@ -75,6 +73,8 @@ body{
     padding: 10px 10px 10px 50px;
     border-bottom: 1px solid #000;
     font-weight: bold;
+    color: red;
+    
 }
 .text-skill p{
     margin-top: 20px;
