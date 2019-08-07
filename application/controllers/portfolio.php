@@ -23,8 +23,11 @@ class portfolio extends CI_Controller {
 
       // $this->load->view('fileportfolio/bganimation');
       // $this->load->view('fileportfolio/banners-top');
-      
-        $this->load->view('fileportfolio/aboutme');
+			
+			
+				$this->load->view('fileportfolio/aboutme');
+				
+
       // $this->load->view('fileportfolio/myportfolio',$data);
       // $this->load->view('fileportfolio/bganimation');
         // $this->load->view('fileportfolio/footer');
@@ -43,10 +46,33 @@ class portfolio extends CI_Controller {
      }
 
      function testView(){
+
+			$data['querysearch'] = $this->selectDB_m->searchFormDatabase();
+
       //  $this->load->view('parallax');
       //  $this->load->view('rellax');
-       $this->load->view('skills');
+			//  $this->load->view('skills');
+			 $this->load->view('searching');
+			//  $this->load->view('fileportfolio/footer');
+		 }
+		 
+		 function results(){
+
+
+			 $this->load->view('results');
+
      }
+
+		 function search(){
+			 $keyword = $this->input->post('keyword');
+			//  echo $keyword;
+			 $data['results']    =   $this->selectDB_m->searchFormDatabase($keyword);
+			//  $this->selectDB_m->searchFormDatabase($data);
+			
+			// $this->load->view('searching',$data);
+			 $this->load->view('results',$data);
+			  
+		 }
 
 
     function add(){

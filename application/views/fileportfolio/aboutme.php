@@ -30,8 +30,9 @@
 <!-- <div class="about-skill d-flex align-items-end justify-content-end">
     <div class="spac-skill"></div>
   
-    <!-- <img src="<?php echo base_url('assets/img/camera1.png'); ?>" class="rellax " data-rellax-speed="1"> -->
-    <div class="rellax text-skill justify-content-start">
+	 <img src="<?php echo base_url('assets/img/camera1.png'); ?>" class="rellax " data-rellax-speed="1"> 
+	
+     <div class="rellax text-skill justify-content-start">
         <span>Skill</span>
         <p>I have knowledge about designand coding</p>
     </div>
@@ -44,8 +45,9 @@
         <span>Adobe Photoshop / Adobe Illustrator / Adobe after effects / Adobe XD</span>
         <span>REACT / C# / VUE / FIREBASE </span>
         <span>3Ds max / Sketchup / Unity</span>
-    </div>
-<div class="rellax line-bot-all-skill"></div> -->
+	</div> -->
+	
+<div class="rellax line-bot-all-skill"></div>
 <span class="rellax contact d-flex justify-content-center  ">
     <!-- <h2>contact</h2> -->
         <div class="row">

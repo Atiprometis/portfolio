@@ -58,7 +58,15 @@ class selectDB_m extends CI_Model{
     function queryOtherimageDB(){
         $query = $this->db->query("SELECT `id_image`, `image`, `image_path`, `image_link`, `typework` FROM `image_portfolio` WHERE `typework` = 'other'limit 8 ");
         return $query;
-    }
+	}
+	
+	function searchFormDatabase($keyword = null){
+		$this->db->like('name',$keyword);
+		$query  =   $this->db->get('user');
+		return $query->result();
+		// $query = $this->db->query(" SELECT * FROM `user` WHERE name LIKE '%สันนิบาติ%' ");
+		// return $query;
+	}
 
 }
 

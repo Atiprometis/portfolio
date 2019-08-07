@@ -2,7 +2,7 @@
 
 
 
-<!-- <?php 
+<?php 
     echo form_open('portfolio/add');
     echo form_label('ชื่อ');
     echo form_input('name');
@@ -20,4 +20,4 @@
     
 
     echo form_close();
-    ?> -->
+    ?>
